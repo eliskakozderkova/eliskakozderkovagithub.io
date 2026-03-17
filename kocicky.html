@@ -2,31 +2,70 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Kočičky</title>
+    <title>Kočičky 🐱</title>
 
     <style>
         body {
-            font-family: Arial;
-            text-align: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
             background-color: #fdf6f0;
         }
 
         nav {
-            background-color: #ffb6c1;
-            padding: 10px;
+            background-color: #ff8fab;
+            padding: 15px;
+            text-align: center;
         }
 
         nav a {
-            margin: 10px;
+            color: white;
+            margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            color: black;
+            font-size: 18px;
         }
 
-        button {
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background-color: #ffc2d1;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 15px;
             margin-top: 10px;
-            padding: 10px;
-            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            background-color: #ff8fab;
+            color: white;
         }
     </style>
 </head>
@@ -38,37 +77,39 @@
         <a href="kocicky.html">Kočičky 🐱</a>
     </nav>
 
-    <h1>Kočičky 🐱</h1>
+    <header>
+        <h1>Kočičky 🐱</h1>
+        <p>Roztomilí společníci, které si zamiluje každý</p>
+    </header>
 
-    <p id="text">Kočky jsou roztomilá a nezávislá zvířata.</p>
+    <div class="container">
 
-    <img id="obrazek" src="https://placekitten.com/300/200">
+        <div class="card">
+            <h2>Proč milujeme kočky?</h2>
+            <p>
+                Kočky jsou hravé, klidné a zároveň velmi elegantní. Každá má svou vlastní osobnost.
+            </p>
+        </div>
 
-    <br>
+        <div class="card">
+            <h2>Zajímavosti</h2>
+            <ul>
+                <li>Kočky prospí většinu dne</li>
+                <li>Mají skvělý noční zrak</li>
+                <li>Dokážou vyskočit až 5× svou výšku</li>
+            </ul>
+        </div>
 
-    <button onclick="zmenObrazek()">Změň kočičku</button>
-    <button onclick="zmenText()">Změň text</button>
+        <div class="card">
+            <h2>Roztomilá kočička 🐾</h2>
+            <img src="https://placekitten.com/800/400" alt="Kočička">
+        </div>
 
-    <p>Kliknutí: <span id="pocitadlo">0</span></p>
+    </div>
 
-    <script>
-        let kliky = 0;
-
-        function zmenObrazek() {
-            let obrazek = document.getElementById("obrazek");
-            obrazek.src = "https://placekitten.com/300/" + (200 + Math.floor(Math.random() * 100));
-
-            kliky++;
-            document.getElementById("pocitadlo").innerText = kliky;
-        }
-
-        function zmenText() {
-            document.getElementById("text").innerText = "Kočičky jsou nejlepší! 🐱";
-
-            kliky++;
-            document.getElementById("pocitadlo").innerText = kliky;
-        }
-    </script>
+    <footer>
+        © 2026 Moje stránka o kočičkách 🐱
+    </footer>
 
 </body>
 </html>
